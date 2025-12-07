@@ -1,4 +1,8 @@
 import { ThemeToggle } from "@/components/theme-toggle";
+import Image from "next/image";
+import uofaLogo from "@/uofa.jpg";
+import aimlLogo from "@/aiml.jpg";
+import fptLogo from "@/fpt.png";
 
 export default function Home() {
   return (
@@ -40,10 +44,10 @@ export default function Home() {
           </div>
         </section>
 
-        {/* 2-Column Layout */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {/* 1-Column Layout */}
+        <div className="flex flex-col gap-12">
             
-            {/* Left Column: About */}
+            {/* About Section */}
             <div className="flex flex-col gap-6">
                 <h2 className="text-xl font-bold">About</h2>
                 <div className="flex flex-col gap-4 text-sm text-zinc-600 dark:text-zinc-400">
@@ -70,86 +74,70 @@ export default function Home() {
             <div className="flex flex-col gap-8">
                 
                 {/* Technical Experience Section */}
-                <section className="flex flex-col gap-4">
+                <section className="flex flex-col gap-8">
                     <h2 className="text-xl font-bold">Technical Experience</h2>
-                    <div className="relative border-l border-neutral-200 dark:border-neutral-700 ml-4 space-y-6">
+                    <div className="relative border-l border-neutral-200 dark:border-neutral-800 ml-3 space-y-8">
                       {/* The University of Adelaide */}
                       <div className="relative pl-8">
                         {/* Timeline Dot/Logo */}
-                        <div className="absolute -left-[20px] top-0 bg-neutral-50 dark:bg-neutral-900 p-1 rounded-full border border-neutral-200 dark:border-neutral-700 shadow-sm">
-                          <div className="w-8 h-8 bg-neutral-900 rounded-full dark:bg-neutral-100" />
+                        <div className="absolute -left-[20px] top-1 bg-neutral-50 dark:bg-neutral-950 p-1 rounded-full border border-neutral-200 dark:border-neutral-800 shadow-sm overflow-hidden">
+                          <Image src={uofaLogo} alt="University of Adelaide" className="w-8 h-8 rounded-full object-cover" />
                         </div>
-                        {/* Card */}
-                        <div className="p-4 border border-neutral-200 dark:border-neutral-800 rounded-xl bg-white dark:bg-neutral-900 shadow-sm">
-                          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
-                            <div>
-                              <h3 className="font-semibold text-sm text-neutral-900 dark:text-neutral-100">The University of Adelaide</h3>
-                              <p className="text-xs text-neutral-600 dark:text-neutral-300">Undergraduate Researcher</p>
-                            </div>
-                            <span className="text-xs text-neutral-700 dark:text-neutral-200 bg-neutral-100 dark:bg-neutral-800 px-3 py-1 rounded-full">
+                        {/* Content */}
+                        <div className="flex flex-col gap-1">
+                            <h3 className="font-semibold text-neutral-900 dark:text-neutral-100">The University of Adelaide</h3>
+                            <p className="text-sm text-neutral-600 dark:text-neutral-400">Undergraduate Researcher</p>
+                            <p className="text-xs text-neutral-500 dark:text-neutral-500 mt-0.5">
                               Nov 2025 - Jan 2026
-                            </span>
-                          </div>
+                            </p>
                         </div>
                       </div>
 
                       {/* AIML */}
                       <div className="relative pl-8">
-                        <div className="absolute -left-[20px] top-0 bg-neutral-50 dark:bg-neutral-900 p-1 rounded-full border border-neutral-200 dark:border-neutral-700 shadow-sm">
-                          <div className="w-8 h-8 bg-neutral-900 rounded-full dark:bg-neutral-100" />
+                        <div className="absolute -left-[20px] top-1 bg-neutral-50 dark:bg-neutral-950 p-1 rounded-full border border-neutral-200 dark:border-neutral-800 shadow-sm overflow-hidden">
+                          <Image src={aimlLogo} alt="AIML" className="w-8 h-8 rounded-full object-cover" />
                         </div>
-                        <div className="p-4 border border-neutral-200 dark:border-neutral-800 rounded-xl bg-white dark:bg-neutral-900 shadow-sm">
-                          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
-                            <div>
-                              <h3 className="font-semibold text-sm text-neutral-900 dark:text-neutral-100">Australian Institute for Machine Learning</h3>
-                              <p className="text-xs text-neutral-600 dark:text-neutral-300">Research Assistant</p>
-                            </div>
-                            <span className="text-xs text-neutral-700 dark:text-neutral-200 bg-neutral-100 dark:bg-neutral-800 px-3 py-1 rounded-full">
+                        <div className="flex flex-col gap-1">
+                            <h3 className="font-semibold text-neutral-900 dark:text-neutral-100">Australian Institute for Machine Learning</h3>
+                            <p className="text-sm text-neutral-600 dark:text-neutral-400">Research Assistant</p>
+                            <p className="text-xs text-neutral-500 dark:text-neutral-500 mt-0.5">
                               Jul 2025 - Nov 2025
-                            </span>
-                          </div>
+                            </p>
                         </div>
                       </div>
 
                       {/* FPT Software */}
                       <div className="relative pl-8">
-                        <div className="absolute -left-[20px] top-0 bg-neutral-50 dark:bg-neutral-900 p-1 rounded-full border border-neutral-200 dark:border-neutral-700 shadow-sm">
-                          <div className="w-8 h-8 bg-blue-500 rounded-full dark:bg-blue-400" />
+                        <div className="absolute -left-[20px] top-1 bg-neutral-50 dark:bg-neutral-950 p-1 rounded-full border border-neutral-200 dark:border-neutral-800 shadow-sm overflow-hidden">
+                          <Image src={fptLogo} alt="FPT Software" className="w-8 h-8 rounded-full object-cover" />
                         </div>
-                        <div className="p-4 border border-neutral-200 dark:border-neutral-800 rounded-xl bg-white dark:bg-neutral-900 shadow-sm">
-                          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
-                            <div>
-                              <h3 className="font-semibold text-sm text-neutral-900 dark:text-neutral-100">FPT Software</h3>
-                              <p className="text-xs text-neutral-600 dark:text-neutral-300">Software Engineer Intern</p>
-                            </div>
-                            <span className="text-xs text-neutral-700 dark:text-neutral-200 bg-neutral-100 dark:bg-neutral-800 px-3 py-1 rounded-full">
+                        <div className="flex flex-col gap-1">
+                            <h3 className="font-semibold text-neutral-900 dark:text-neutral-100">FPT Software</h3>
+                            <p className="text-sm text-neutral-600 dark:text-neutral-400">Software Engineer Intern</p>
+                            <p className="text-xs text-neutral-500 dark:text-neutral-500 mt-0.5">
                               Jul 2025 - Sep 2025
-                            </span>
-                          </div>
+                            </p>
                         </div>
                       </div>
                     </div>
                 </section>
 
                 {/* Education Section */}
-                <section className="flex flex-col gap-4">
+                <section className="flex flex-col gap-8">
                     <h2 className="text-xl font-bold">Education</h2>
-                    <div className="relative border-l border-neutral-200 dark:border-neutral-800 ml-4 space-y-6">
+                    <div className="relative border-l border-neutral-200 dark:border-neutral-800 ml-3 space-y-8">
                       {/* Education Item*/}
                       <div className="relative pl-8">
-                        <div className="absolute -left-[20px] top-0 bg-neutral-50 dark:bg-neutral-900 p-1 rounded-full border border-neutral-200 dark:border-neutral-700 shadow-sm">
-                          <div className="w-8 h-8 bg-red-500 rounded-full dark:bg-red-400" />
+                        <div className="absolute -left-[20px] top-1 bg-neutral-50 dark:bg-neutral-950 p-1 rounded-full border border-neutral-200 dark:border-neutral-800 shadow-sm overflow-hidden">
+                          <Image src={uofaLogo} alt="University of Adelaide" className="w-8 h-8 rounded-full object-cover" />
                         </div>
-                        <div className="p-4 border border-neutral-200 dark:border-neutral-800 rounded-xl bg-white dark:bg-neutral-900 shadow-sm">
-                          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
-                            <div>
-                              <h3 className="font-semibold text-sm text-neutral-900 dark:text-neutral-100">The University of Adelaide</h3>
-                              <p className="text-xs text-neutral-600 dark:text-neutral-300">Bachelor of Computer Science (Advanced)</p>
-                            </div>
-                            <span className="text-xs text-neutral-700 dark:text-neutral-200 bg-neutral-100 dark:bg-neutral-800 px-3 py-1 rounded-full">
+                        <div className="flex flex-col gap-1">
+                            <h3 className="font-semibold text-neutral-900 dark:text-neutral-100">The University of Adelaide</h3>
+                            <p className="text-sm text-neutral-600 dark:text-neutral-400">Bachelor of Computer Science (Advanced)</p>
+                            <p className="text-xs text-neutral-500 dark:text-neutral-500 mt-0.5">
                               Feb 2024
-                            </span>
-                          </div>
+                            </p>
                         </div>
                       </div>
                     </div>
