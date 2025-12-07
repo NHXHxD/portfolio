@@ -88,7 +88,7 @@ export default function Home() {
                             <h3 className="font-semibold text-neutral-900 dark:text-neutral-100">The University of Adelaide</h3>
                             <p className="text-sm text-neutral-600 dark:text-neutral-400">Undergraduate Researcher</p>
                             <p className="text-xs text-neutral-500 dark:text-neutral-500 mt-0.5">
-                              Nov 2025 - Jan 2026
+                              November 2025 - January 2026
                             </p>
                         </div>
                       </div>
@@ -102,7 +102,7 @@ export default function Home() {
                             <h3 className="font-semibold text-neutral-900 dark:text-neutral-100">Australian Institute for Machine Learning</h3>
                             <p className="text-sm text-neutral-600 dark:text-neutral-400">Research Assistant</p>
                             <p className="text-xs text-neutral-500 dark:text-neutral-500 mt-0.5">
-                              Jul 2025 - Nov 2025
+                              July 2025 - November 2025
                             </p>
                         </div>
                       </div>
@@ -116,7 +116,7 @@ export default function Home() {
                             <h3 className="font-semibold text-neutral-900 dark:text-neutral-100">FPT Software</h3>
                             <p className="text-sm text-neutral-600 dark:text-neutral-400">Software Engineer Intern</p>
                             <p className="text-xs text-neutral-500 dark:text-neutral-500 mt-0.5">
-                              Jul 2025 - Sep 2025
+                              July 2025 - September 2025
                             </p>
                         </div>
                       </div>
@@ -136,7 +136,7 @@ export default function Home() {
                             <h3 className="font-semibold text-neutral-900 dark:text-neutral-100">The University of Adelaide</h3>
                             <p className="text-sm text-neutral-600 dark:text-neutral-400">Bachelor of Computer Science (Advanced)</p>
                             <p className="text-xs text-neutral-500 dark:text-neutral-500 mt-0.5">
-                              Feb 2024
+                              February 2024
                             </p>
                         </div>
                       </div>
