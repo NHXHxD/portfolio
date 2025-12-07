@@ -2,19 +2,19 @@ import { ThemeToggle } from "@/components/theme-toggle";
 
 export default function Home() {
   return (
-    <div className="min-h-screen p-8 sm:p-20 font-sans">
+    <div className="min-h-screen p-8 sm:p-20 font-sans bg-neutral-50 text-neutral-900 transition-colors dark:bg-neutral-950 dark:text-neutral-100">
       <main className="max-w-2xl mx-auto space-y-8">
 
         {/* Navbar */}
         <nav className="flex justify-between items-center mb-8">
-            <ul className="flex flex-wrap gap-4 sm:gap-6 text-sm font-medium text-zinc-600 dark:text-zinc-400">
-                <li className="text-black dark:text-white cursor-pointer">Home</li>
-                <li className="hover:text-black dark:hover:text-white transition-colors cursor-pointer">About</li>
-                <li className="hover:text-black dark:hover:text-white transition-colors cursor-pointer">Experience</li>
-                <li className="hover:text-black dark:hover:text-white transition-colors cursor-pointer">Projects</li>
-                <li className="hover:text-black dark:hover:text-white transition-colors cursor-pointer">Blog</li>
-                <li className="hover:text-black dark:hover:text-white transition-colors cursor-pointer">Contact</li>
-                <li className="hover:text-black dark:hover:text-white transition-colors cursor-pointer">Resume</li>
+            <ul className="flex flex-wrap gap-4 sm:gap-6 text-sm font-medium text-neutral-600 dark:text-neutral-400">
+            <li className="hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors cursor-pointer">Home</li>
+            <li className="hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors cursor-pointer">About</li>
+                <li className="hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors cursor-pointer">Experience</li>
+                <li className="hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors cursor-pointer">Projects</li>
+                <li className="hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors cursor-pointer">Blog</li>
+                <li className="hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors cursor-pointer">Contact</li>
+                <li className="hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors cursor-pointer">Resume</li>
             </ul>
             <ThemeToggle />
         </nav>
@@ -72,48 +72,86 @@ export default function Home() {
                 {/* Technical Experience Section */}
                 <section className="flex flex-col gap-4">
                     <h2 className="text-xl font-bold">Technical Experience</h2>
-                    {/* The University of Adelaide */}
-                    <div className="flex gap-4 items-start p-3 border border-zinc-200 dark:border-zinc-800 rounded-lg bg-zinc-50 dark:bg-zinc-900/50">
-                        <div className="w-10 h-10 bg-black rounded-full shrink-0"></div>
-                        <div>
-                            <h3 className="font-semibold text-sm">The University of Adelaide</h3>
-                            <p className="text-xs text-zinc-500">Undergraduate Researcher</p>
-                            <p className="text-xs text-zinc-400 mt-1">November 2025 - January 2026</p>
+                    <div className="relative border-l border-neutral-200 dark:border-neutral-700 ml-4 space-y-6">
+                      {/* The University of Adelaide */}
+                      <div className="relative pl-8">
+                        {/* Timeline Dot/Logo */}
+                        <div className="absolute -left-[20px] top-0 bg-neutral-50 dark:bg-neutral-900 p-1 rounded-full border border-neutral-200 dark:border-neutral-700 shadow-sm">
+                          <div className="w-8 h-8 bg-neutral-900 rounded-full dark:bg-neutral-100" />
                         </div>
-                    </div>
+                        {/* Card */}
+                        <div className="p-4 border border-neutral-200 dark:border-neutral-800 rounded-xl bg-white dark:bg-neutral-900 shadow-sm">
+                          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
+                            <div>
+                              <h3 className="font-semibold text-sm text-neutral-900 dark:text-neutral-100">The University of Adelaide</h3>
+                              <p className="text-xs text-neutral-600 dark:text-neutral-300">Undergraduate Researcher</p>
+                            </div>
+                            <span className="text-xs text-neutral-700 dark:text-neutral-200 bg-neutral-100 dark:bg-neutral-800 px-3 py-1 rounded-full">
+                              Nov 2025 - Jan 2026
+                            </span>
+                          </div>
+                        </div>
+                      </div>
 
-                    {/* AIML */}
-                     <div className="flex gap-4 items-start p-3 border border-zinc-200 dark:border-zinc-800 rounded-lg bg-zinc-50 dark:bg-zinc-900/50">
-                        <div className="w-10 h-10 bg-black rounded-full shrink-0"></div>
-                        <div>
-                            <h3 className="font-semibold text-sm">Australian Institute for Machine Learning</h3>
-                            <p className="text-xs text-zinc-500">Research Assistant</p>
-                            <p className="text-xs text-zinc-400 mt-1">July 2025 - November 2025</p>
+                      {/* AIML */}
+                      <div className="relative pl-8">
+                        <div className="absolute -left-[20px] top-0 bg-neutral-50 dark:bg-neutral-900 p-1 rounded-full border border-neutral-200 dark:border-neutral-700 shadow-sm">
+                          <div className="w-8 h-8 bg-neutral-900 rounded-full dark:bg-neutral-100" />
                         </div>
-                    </div>
-                    {/* FPT Software */}
-                    <div className="flex gap-4 items-start p-3 border border-zinc-200 dark:border-zinc-800 rounded-lg bg-zinc-50 dark:bg-zinc-900/50">
-                        <div className="w-10 h-10 bg-blue-500 rounded-full shrink-0"></div>
-                        <div>
-                            <h3 className="font-semibold text-sm">FPT Software</h3>
-                            <p className="text-xs text-zinc-500">Software Engineer Intern</p>
-                            <p className="text-xs text-zinc-400 mt-1">July 2025 - September 2025</p>
+                        <div className="p-4 border border-neutral-200 dark:border-neutral-800 rounded-xl bg-white dark:bg-neutral-900 shadow-sm">
+                          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
+                            <div>
+                              <h3 className="font-semibold text-sm text-neutral-900 dark:text-neutral-100">Australian Institute for Machine Learning</h3>
+                              <p className="text-xs text-neutral-600 dark:text-neutral-300">Research Assistant</p>
+                            </div>
+                            <span className="text-xs text-neutral-700 dark:text-neutral-200 bg-neutral-100 dark:bg-neutral-800 px-3 py-1 rounded-full">
+                              Jul 2025 - Nov 2025
+                            </span>
+                          </div>
                         </div>
+                      </div>
+
+                      {/* FPT Software */}
+                      <div className="relative pl-8">
+                        <div className="absolute -left-[20px] top-0 bg-neutral-50 dark:bg-neutral-900 p-1 rounded-full border border-neutral-200 dark:border-neutral-700 shadow-sm">
+                          <div className="w-8 h-8 bg-blue-500 rounded-full dark:bg-blue-400" />
+                        </div>
+                        <div className="p-4 border border-neutral-200 dark:border-neutral-800 rounded-xl bg-white dark:bg-neutral-900 shadow-sm">
+                          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
+                            <div>
+                              <h3 className="font-semibold text-sm text-neutral-900 dark:text-neutral-100">FPT Software</h3>
+                              <p className="text-xs text-neutral-600 dark:text-neutral-300">Software Engineer Intern</p>
+                            </div>
+                            <span className="text-xs text-neutral-700 dark:text-neutral-200 bg-neutral-100 dark:bg-neutral-800 px-3 py-1 rounded-full">
+                              Jul 2025 - Sep 2025
+                            </span>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                 </section>
 
                 {/* Education Section */}
                 <section className="flex flex-col gap-4">
                     <h2 className="text-xl font-bold">Education</h2>
-                    {/* Education Item*/}
-                    <div className="flex gap-4 items-start p-3 border border-zinc-200 dark:border-zinc-800 rounded-lg bg-zinc-50 dark:bg-zinc-900/50">
-                        <div className="w-10 h-10 bg-red-500 rounded-full shrink-0"></div>
-                        <div>
-                            <h3 className="font-semibold text-sm">The University of Adelaide</h3>
-                            <p className="text-xs text-zinc-500">Bachelor of Computer Science (Advanced)</p>
-                            <p className="text-xs text-zinc-400 mt-1">February 2024</p>
-
+                    <div className="relative border-l border-neutral-200 dark:border-neutral-800 ml-4 space-y-6">
+                      {/* Education Item*/}
+                      <div className="relative pl-8">
+                        <div className="absolute -left-[20px] top-0 bg-neutral-50 dark:bg-neutral-900 p-1 rounded-full border border-neutral-200 dark:border-neutral-700 shadow-sm">
+                          <div className="w-8 h-8 bg-red-500 rounded-full dark:bg-red-400" />
                         </div>
+                        <div className="p-4 border border-neutral-200 dark:border-neutral-800 rounded-xl bg-white dark:bg-neutral-900 shadow-sm">
+                          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
+                            <div>
+                              <h3 className="font-semibold text-sm text-neutral-900 dark:text-neutral-100">The University of Adelaide</h3>
+                              <p className="text-xs text-neutral-600 dark:text-neutral-300">Bachelor of Computer Science (Advanced)</p>
+                            </div>
+                            <span className="text-xs text-neutral-700 dark:text-neutral-200 bg-neutral-100 dark:bg-neutral-800 px-3 py-1 rounded-full">
+                              Feb 2024
+                            </span>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                 </section>
 
