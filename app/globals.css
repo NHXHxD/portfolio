@@ -10,7 +10,7 @@
   --foreground: #171717;
 }
 
-/* Dark mode overrides if we need them later */
+/* Dark mode */
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
