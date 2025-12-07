@@ -2,6 +2,18 @@ export default function Home() {
   return (
     <div className="min-h-screen p-8 sm:p-20 font-sans">
       <main className="max-w-2xl mx-auto space-y-8">
+
+        {/* Navbar */}
+        <nav className="flex justify-center sm:justify-start mb-8">
+            <ul className="flex flex-wrap gap-4 sm:gap-6 text-sm font-medium text-zinc-600 dark:text-zinc-400">
+                <li className="text-black dark:text-white cursor-pointer">Home</li>
+                <li className="hover:text-black dark:hover:text-white transition-colors cursor-pointer">About</li>
+                <li className="hover:text-black dark:hover:text-white transition-colors cursor-pointer">Experience</li>
+                <li className="hover:text-black dark:hover:text-white transition-colors cursor-pointer">Projects</li>
+                <li className="hover:text-black dark:hover:text-white transition-colors cursor-pointer">Blog</li>
+                <li className="hover:text-black dark:hover:text-white transition-colors cursor-pointer">Contact</li>
+            </ul>
+        </nav>
         
         {/* Hero Section */}
         <section className="flex flex-col-reverse sm:flex-row items-start gap-8 sm:gap-12">
