@@ -12,43 +12,45 @@ export default function Home() {
         {/* Navbar */}
         <nav className="flex justify-between items-center mb-8">
             <ul className="flex flex-wrap gap-4 sm:gap-6 text-sm font-medium text-neutral-600 dark:text-neutral-400">
-            <li className="hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors cursor-pointer">Home</li>
-            <li className="hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors cursor-pointer">About</li>
-                <li className="hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors cursor-pointer">Experience</li>
-                <li className="hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors cursor-pointer">Projects</li>
-                <li className="hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors cursor-pointer">Blog</li>
-                <li className="hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors cursor-pointer">Contact</li>
-                <li className="hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors cursor-pointer">Resume</li>
+              <li><a href="#home" className="hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors">Home</a></li>
+              <li><a href="#about" className="hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors">About</a></li>
+              <li><a href="#experience" className="hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors">Experience</a></li>
+              <li><a href="#projects" className="hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors">Projects</a></li>
+              <li><a href="#blog" className="hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors">Blog</a></li>
+              <li><a href="#contact" className="hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors">Contact</a></li>
+              <li><a href="#resume" className="hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors">Resume</a></li>
             </ul>
             <ThemeToggle />
         </nav>
         
         {/* Hero Section */}
-        <section className="flex flex-col gap-4">
+        <section id="home" className="flex flex-col gap-3 scroll-mt-8">
           <h1 className="text-4xl sm:text-5xl font-bold tracking-tight">
             Hi, I&apos;m Hy Nguyen.
           </h1>
           
-          <div className="space-y-4 text-zinc-600 dark:text-zinc-400">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </p>
-            <p>
-              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-              pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-              culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-          </div>
+          <p className="text-lg text-neutral-500 dark:text-neutral-400">
+            Computer Science Student & Aspiring Researcher. Currently exploring the worlds of research and Software Engineering.
+          </p>
+          
+          <p className="text-base text-neutral-600 dark:text-neutral-400">
+            Currently researching at{" "}
+            <a 
+              href="https://www.adelaide.edu.au" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="underline underline-offset-2 font-medium text-neutral-900 dark:text-neutral-100 hover:text-neutral-600 dark:hover:text-neutral-300 transition-colors"
+            >
+              The University of Adelaide
+            </a>.
+          </p>
         </section>
 
         {/* 1-Column Layout */}
         <div className="flex flex-col gap-12">
             
             {/* About Section */}
-            <div className="flex flex-col gap-6">
+            <section id="about" className="flex flex-col gap-6 scroll-mt-8">
                 <h2 className="text-xl font-bold">About</h2>
                 <div className="flex flex-col gap-4 text-sm text-zinc-600 dark:text-zinc-400">
                     <p>
@@ -63,18 +65,15 @@ export default function Home() {
                         cupidatat non proident, sunt in culpa qui officia deserunt mollit
                         anim id est laborum.
                     </p>
-                    <p>
-                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                        accusantium doloremque laudantium, totam rem aperiam.
-                    </p>
+
                 </div>
-            </div>
+            </section>
 
             {/* Right Column: Experience & Education */}
             <div className="flex flex-col gap-8">
                 
                 {/* Technical Experience Section */}
-                <section className="flex flex-col gap-8">
+                <section id="experience" className="flex flex-col gap-8 scroll-mt-8">
                     <h2 className="text-xl font-bold">Technical Experience</h2>
                     <div className="relative border-l border-neutral-200 dark:border-neutral-800 ml-3 space-y-8">
                       {/* The University of Adelaide */}
@@ -124,7 +123,7 @@ export default function Home() {
                 </section>
 
                 {/* Education Section */}
-                <section className="flex flex-col gap-8">
+                <section id="education" className="flex flex-col gap-8 scroll-mt-8">
                     <h2 className="text-xl font-bold">Education</h2>
                     <div className="relative border-l border-neutral-200 dark:border-neutral-800 ml-3 space-y-8">
                       {/* Education Item*/}
@@ -144,6 +143,70 @@ export default function Home() {
                 </section>
 
             </div>
+
+            {/* Projects Section */}
+            <section id="projects" className="flex flex-col gap-8 scroll-mt-8">
+                <h2 className="text-xl font-bold">Projects</h2>
+                <div className="relative border-l border-neutral-200 dark:border-neutral-800 ml-3 space-y-8">
+                  {/* Project 1 */}
+                  <div className="relative pl-8">
+                    <div className="absolute -left-[20px] top-1 bg-neutral-50 dark:bg-neutral-950 p-1 rounded-full border border-neutral-200 dark:border-neutral-800 shadow-sm overflow-hidden">
+                      <div className="w-8 h-8 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white text-sm font-bold">P1</div>
+                    </div>
+                    <div className="flex flex-col gap-1">
+                        <h3 className="font-semibold text-neutral-900 dark:text-neutral-100">Project</h3>
+                        <p className="text-sm text-neutral-600 dark:text-neutral-400">project</p>
+                        <p className="text-xs text-neutral-500 dark:text-neutral-500 mt-0.5">
+                          2025
+                        </p>
+                    </div>
+                  </div>
+
+                  {/* Project 2 */}
+                  <div className="relative pl-8">
+                    <div className="absolute -left-[20px] top-1 bg-neutral-50 dark:bg-neutral-950 p-1 rounded-full border border-neutral-200 dark:border-neutral-800 shadow-sm overflow-hidden">
+                      <div className="w-8 h-8 rounded-full bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center text-white text-sm font-bold">P2</div>
+                    </div>
+                    <div className="flex flex-col gap-1">
+                        <h3 className="font-semibold text-neutral-900 dark:text-neutral-100">Project</h3>
+                        <p className="text-sm text-neutral-600 dark:text-neutral-400">project</p>
+                        <p className="text-xs text-neutral-500 dark:text-neutral-500 mt-0.5">
+                          2024
+                        </p>
+                    </div>
+                  </div>
+
+                  {/* Project 3 */}
+                  <div className="relative pl-8">
+                    <div className="absolute -left-[20px] top-1 bg-neutral-50 dark:bg-neutral-950 p-1 rounded-full border border-neutral-200 dark:border-neutral-800 shadow-sm overflow-hidden">
+                      <div className="w-8 h-8 rounded-full bg-gradient-to-br from-orange-500 to-red-600 flex items-center justify-center text-white text-sm font-bold">P3</div>
+                    </div>
+                    <div className="flex flex-col gap-1">
+                        <h3 className="font-semibold text-neutral-900 dark:text-neutral-100">Project</h3>
+                        <p className="text-sm text-neutral-600 dark:text-neutral-400">project</p>
+                        <p className="text-xs text-neutral-500 dark:text-neutral-500 mt-0.5">
+                          2024
+                        </p>
+                    </div>
+                  </div>
+                </div>
+            </section>
+
+            {/* Contact Section */}
+            <section id="contact" className="flex flex-col gap-6 scroll-mt-8">
+                <h2 className="text-xl font-bold">Contact</h2>
+                <p className="text-sm text-neutral-500 dark:text-neutral-400">
+                    Coming soon...
+                </p>
+            </section>
+
+            {/* Resume Section */}
+            <section id="resume" className="flex flex-col gap-6 scroll-mt-8">
+                <h2 className="text-xl font-bold">Resume</h2>
+                <p className="text-sm text-neutral-500 dark:text-neutral-400">
+                    Coming soon...
+                </p>
+            </section>
 
         </div>
 
