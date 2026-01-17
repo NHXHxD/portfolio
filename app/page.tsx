@@ -2,8 +2,8 @@ import { ThemeToggle } from "@/components/theme-toggle";
 import { ExpandableCard } from "@/components/expandable-card";
 import Image from "next/image";
 import uofaLogo from "@/uofa.jpg";
-import aimlLogo from "@/aiml.jpg";
 import fptLogo from "@/fpt.png";
+import coderecallLogo from "@/coderecall.png";
 
 export default function Home() {
   return (
@@ -59,7 +59,7 @@ export default function Home() {
               </svg>
             </a>
             <a 
-              href="https://www.linkedin.com/in/hy-nguyen" 
+              href="https://www.linkedin.com/in/hoang-xuan-hy-nguyen" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-neutral-500 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors"
@@ -112,29 +112,28 @@ export default function Home() {
                 <section id="experience" className="flex flex-col gap-8 scroll-mt-8">
                     <h2 className="text-xl font-bold">Technical Experience</h2>
                     <div className="relative border-l border-neutral-200 dark:border-neutral-800 ml-3 space-y-8">
-                      {/* The University of Adelaide */}
+                      {/* Undergraduate Researcher */}
                       <ExpandableCard
                         logo={<Image src={uofaLogo} alt="University of Adelaide" className="w-8 h-8 rounded-full object-cover" />}
-                        title="The University of Adelaide"
+                        title="University of Adelaide"
                         subtitle="Undergraduate Researcher"
-                        dateRange="November 2025 - January 2026"
+                        dateRange="Dec 2025 – Present"
                         bullets={[
-                          "Conducted research on machine learning applications",
-                          "Collaborated with faculty on data analysis projects",
-                          "Contributed to academic publications and presentations",
+                          <>Benchmarked <span className="font-medium text-neutral-800 dark:text-neutral-200">local search heuristics (LNS, VNS, LKH-3)</span> for the <span className="font-medium text-neutral-800 dark:text-neutral-200">Traveling Salesman Problem with Time Windows (TSPTW)</span> instances enforcing strict computational budgets to ensure algorithmic fairness.</>,
+                          <>Implemented a <span className="font-medium text-neutral-800 dark:text-neutral-200">sequential strategy</span> to transfer solution states between tasks, statistically validating efficiency gains over isolated execution.</>,
+                          <>Optimizing an <span className="font-medium text-neutral-800 dark:text-neutral-200">Evolutionary Algorithm</span> to outperform these local search benchmarks, targeting superior solution quality and success ratios in highly constrained search spaces.</>,
                         ]}
                       />
 
-                      {/* AIML */}
+                      {/* Research Assistant */}
                       <ExpandableCard
-                        logo={<Image src={aimlLogo} alt="AIML" className="w-8 h-8 rounded-full object-cover" />}
-                        title="Australian Institute for Machine Learning"
+                        logo={<Image src={uofaLogo} alt="University of Adelaide" className="w-8 h-8 rounded-full object-cover" />}
+                        title="University of Adelaide"
                         subtitle="Research Assistant"
-                        dateRange="July 2025 - November 2025"
+                        dateRange="Jul 2025 – Dec 2025"
                         bullets={[
-                          "Assisted in developing machine learning models for research projects",
-                          "Processed and analyzed large-scale datasets",
-                          "Documented research findings and methodologies",
+                          <>Contributed to fine-tuning <span className="font-medium text-neutral-800 dark:text-neutral-200">Vision-and-Language foundation models</span> by refining the synthetic data generation pipeline in <span className="font-medium text-neutral-800 dark:text-neutral-200">NVIDIA Isaac Sim</span>.</>,
+                          <>Enhanced existing trajectory algorithms to eliminate path instability, producing <span className="font-medium text-neutral-800 dark:text-neutral-200">500 high-fidelity video sequences</span> used as ground-truth training data.</>,
                         ]}
                       />
 
@@ -143,11 +142,10 @@ export default function Home() {
                         logo={<Image src={fptLogo} alt="FPT Software" className="w-8 h-8 rounded-full object-cover" />}
                         title="FPT Software"
                         subtitle="Software Engineer Intern"
-                        dateRange="July 2025 - September 2025"
+                        dateRange="Jul 2025 – Sep 2025"
                         bullets={[
-                          "Developed and maintained web applications using modern frameworks",
-                          "Participated in agile development processes and code reviews",
-                          "Implemented new features and resolved software bugs",
+                          <>Engineered a <span className="font-medium text-neutral-800 dark:text-neutral-200">full-stack LLM-powered analytics platform</span> for NRC Health, enabling enterprise users to extract custom data insights through <span className="font-medium text-neutral-800 dark:text-neutral-200">natural language queries</span>.</>,
+                          <>Implemented production-ready <span className="font-medium text-neutral-800 dark:text-neutral-200">data-to-text pipelines</span> and <span className="font-medium text-neutral-800 dark:text-neutral-200">prompt engineering strategies</span>, automating report generation to significantly streamline workflows for non-technical stakeholders.</>,
                         ]}
                       />
                     </div>
@@ -164,9 +162,9 @@ export default function Home() {
                         </div>
                         <div className="flex flex-col gap-1">
                             <h3 className="font-semibold text-neutral-900 dark:text-neutral-100">The University of Adelaide</h3>
-                            <p className="text-sm text-neutral-600 dark:text-neutral-400">Bachelor of Computer Science (Advanced)</p>
+                            <p className="text-sm text-neutral-600 dark:text-neutral-400">Bachelor of Computer Science (Advanced) · GPA: 6.25/7.0</p>
                             <p className="text-xs text-neutral-500 dark:text-neutral-500 mt-0.5">
-                              February 2024
+                              Feb 2024 – Present
                             </p>
                         </div>
                       </div>
@@ -179,42 +177,29 @@ export default function Home() {
             <section id="projects" className="flex flex-col gap-8 scroll-mt-8">
                 <h2 className="text-xl font-bold">Projects</h2>
                 <div className="relative border-l border-neutral-200 dark:border-neutral-800 ml-3 space-y-8">
-                  {/* Project 1 */}
+                  {/* CodeRecall */}
                   <ExpandableCard
-                    logo={<div className="w-8 h-8 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white text-sm font-bold">P1</div>}
-                    title="Project"
-                    subtitle="project"
-                    dateRange="2025"
+                    logo={<Image src={coderecallLogo} alt="CodeRecall" className="w-8 h-8 rounded-full object-cover" />}
+                    title="CodeRecall"
+                    subtitle="Next.js, TypeScript, PostgreSQL"
+                    dateRange="Jan 2026 – Present"
+                    link="https://coderecall-web.vercel.app/"
                     bullets={[
-                      "Built with modern web technologies",
-                      "Implemented key features and functionality",
-                      "Deployed to production environment",
+                      <>Engineered a <span className="font-medium text-neutral-800 dark:text-neutral-200">full-stack spaced repetition platform</span>, implementing a <span className="font-medium text-neutral-800 dark:text-neutral-200">modified FSRS algorithm</span> to mathematically optimize review intervals based on memory stability metrics.</>,
+                      <>Designed a <span className="font-medium text-neutral-800 dark:text-neutral-200">confidence-based grading system</span> that drives a custom decay formula, dynamically calibrating target retention probabilities to maximize study efficiency.</>,
                     ]}
                   />
 
-                  {/* Project 2 */}
+                  {/* Cinesphere */}
                   <ExpandableCard
-                    logo={<div className="w-8 h-8 rounded-full bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center text-white text-sm font-bold">P2</div>}
-                    title="Project"
-                    subtitle="project"
-                    dateRange="2024"
+                    logo={<div className="w-8 h-8 rounded-full bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center text-white text-sm font-bold">CS</div>}
+                    title="Cinesphere"
+                    subtitle="Vue.js, Node.js, Express, REST API"
+                    link="https://github.com/NHXHxD/cinesphere"
+                    dateRange="Mar 2025 – Jun 2025"
                     bullets={[
-                      "Developed full-stack application",
-                      "Integrated third-party APIs and services",
-                      "Optimized performance and user experience",
-                    ]}
-                  />
-
-                  {/* Project 3 */}
-                  <ExpandableCard
-                    logo={<div className="w-8 h-8 rounded-full bg-gradient-to-br from-orange-500 to-red-600 flex items-center justify-center text-white text-sm font-bold">P3</div>}
-                    title="Project"
-                    subtitle="project"
-                    dateRange="2024"
-                    bullets={[
-                      "Designed and implemented core architecture",
-                      "Collaborated with team members on features",
-                      "Maintained documentation and code quality",
+                      <>Architected a <span className="font-medium text-neutral-800 dark:text-neutral-200">production-ready web application</span>, implementing a <span className="font-medium text-neutral-800 dark:text-neutral-200">modular MVC architecture</span> to decouple business logic, API routes, and data access layers.</>,
+                      <>Designed a <span className="font-medium text-neutral-800 dark:text-neutral-200">scalable relational database schema (MySQL)</span> and a custom <span className="font-medium text-neutral-800 dark:text-neutral-200">Repository Pattern abstraction layer</span>, optimizing complex join queries for real-time aggregation.</>,
                     ]}
                   />
                 </div>
@@ -241,7 +226,7 @@ export default function Home() {
               </svg>
             </a>
             <a 
-              href="https://www.linkedin.com/in/hy-nguyen" 
+              href="https://www.linkedin.com/in/hoang-xuan-hy-nguyen" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors"
