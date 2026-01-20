@@ -30,11 +30,11 @@ export default function Home() {
           </h1>
           
           <p className="text-lg text-neutral-500 dark:text-neutral-400">
-            Computer Science Student & Aspiring Researcher. Currently exploring the worlds of research and Software Engineering.
+          Computer Science Student with experience across research and industry.
           </p>
           
           <p className="text-base text-neutral-600 dark:text-neutral-400">
-            Currently researching at{" "}
+            Researching at{" "}
             <a 
               href="https://www.adelaide.edu.au" 
               target="_blank" 
@@ -90,16 +90,11 @@ export default function Home() {
                 <h2 className="text-xl font-bold">About</h2>
                 <div className="flex flex-col gap-4 text-sm text-zinc-600 dark:text-zinc-400">
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-                        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-                        ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                        aliquip ex ea commodo consequat.
+                    My work spans research and industry, from robotics and computer vision to evolutionary optimization and LLM-integrated full-stack systems.
+
                     </p>
                     <p>
-                        Duis aute irure dolor in reprehenderit in voluptate velit esse
-                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                        cupidatat non proident, sunt in culpa qui officia deserunt mollit
-                        anim id est laborum.
+                    I’m motivated by environments that demand more over time, where I actively seek out harder problems, hold myself to higher standards, and invest the effort needed to grow into them.
                     </p>
 
                 </div>
@@ -162,7 +157,9 @@ export default function Home() {
                         </div>
                         <div className="flex flex-col gap-1">
                             <h3 className="font-semibold text-neutral-900 dark:text-neutral-100">The University of Adelaide</h3>
-                            <p className="text-sm text-neutral-600 dark:text-neutral-400">Bachelor of Computer Science (Advanced) · GPA: 6.25/7.0</p>
+                            <p className="text-sm text-neutral-600 dark:text-neutral-400">Bachelor of Computer Science (Advanced)</p>
+                            <p className="text-sm text-neutral-600 dark:text-neutral-400">GPA: 6.25/7.0</p>
+
                             <p className="text-xs text-neutral-500 dark:text-neutral-500 mt-0.5">
                               Feb 2024 – Present
                             </p>
@@ -192,7 +189,7 @@ export default function Home() {
 
                   {/* Cinesphere */}
                   <ExpandableCard
-                    logo={<div className="w-8 h-8 rounded-full bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center text-white text-sm font-bold">CS</div>}
+                    logo={<div className="w-8 h-8 rounded-full bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center text-white text-sm font-bold">CS</div>}
                     title="Cinesphere"
                     subtitle="Vue.js, Node.js, Express, REST API"
                     link="https://github.com/NHXHxD/cinesphere"
