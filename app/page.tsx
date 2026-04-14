@@ -38,16 +38,7 @@ export default function Home() {
           </p>
           
           <p className="text-base text-neutral-600 dark:text-neutral-400">
-            Currently interning at{" "}
-            <a 
-              href="https://www.maptek.com" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="underline underline-offset-2 font-medium text-neutral-900 dark:text-neutral-100 hover:text-neutral-600 dark:hover:text-neutral-300 transition-colors"
-            >
-              Maptek
-            </a>{" "}
-            while studying at{" "}
+            Currently studying at{" "}
             <a
               href="https://www.adelaide.edu.au"
               target="_blank"
