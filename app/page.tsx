@@ -4,6 +4,8 @@ import Image from "next/image";
 import uofaLogo from "@/uofa.jpg";
 import fptLogo from "@/fpt.png";
 import coderecallLogo from "@/coderecall.png";
+import optiverLogo from "@/optiver.jpeg";
+import janeStreetLogo from "@/js.jpeg";
 
 export default function Home() {
   return (
@@ -119,7 +121,7 @@ export default function Home() {
                     <div className="relative border-l border-neutral-200 dark:border-neutral-800 ml-3 space-y-8">
                       {/* Optiver */}
                       <ExpandableCard
-                        logo={<div className="w-8 h-8 rounded-full bg-gradient-to-br from-sky-500 to-blue-700 flex items-center justify-center text-white text-xs font-bold">OP</div>}
+                        logo={<Image src={optiverLogo} alt="Optiver" className="w-8 h-8 rounded-full object-cover" />}
                         title="Optiver"
                         subtitle="Career Kickstarter - Software Engineering Track"
                         dateRange="Mar 2026"
@@ -228,7 +230,7 @@ export default function Home() {
                 <h2 className="text-xl font-bold">Awards</h2>
                 <div className="relative border-l border-neutral-200 dark:border-neutral-800 ml-3 space-y-8">
                   <ExpandableCard
-                    logo={<div className="w-8 h-8 rounded-full bg-gradient-to-br from-emerald-500 to-teal-700 flex items-center justify-center text-white text-xs font-bold">JS</div>}
+                    logo={<Image src={janeStreetLogo} alt="Jane Street" className="w-8 h-8 rounded-full object-cover" />}
                     title="Jane Street Electronic Trading Challenge"
                     subtitle="First Place"
                     dateRange="Mar 2025"
