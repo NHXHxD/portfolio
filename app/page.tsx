@@ -16,8 +16,10 @@ export default function Home() {
               <li><a href="#home" className="hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors">Home</a></li>
               <li><a href="#about" className="hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors">About</a></li>
               <li><a href="#experience" className="hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors">Experience</a></li>
+              <li><a href="#education" className="hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors">Education</a></li>
               <li><a href="#projects" className="hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors">Projects</a></li>
-              <li><a href="#blog" className="hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors">Blog</a></li>
+              <li><a href="#awards" className="hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors">Awards</a></li>
+              <li><a href="#skills" className="hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors">Skills</a></li>
               <li><a href="/resume" target="_blank" rel="noopener noreferrer" className="hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors">Resume</a></li>
             </ul>
             <ThemeToggle />
@@ -30,18 +32,27 @@ export default function Home() {
           </h1>
           
           <p className="text-lg text-neutral-500 dark:text-neutral-400">
-          Computer Science Student with experience across research and industry.
+            Software engineer and computer science student focused on high-performance systems, optimization, and ML-powered products.
           </p>
           
           <p className="text-base text-neutral-600 dark:text-neutral-400">
-            Researching at{" "}
+            Currently interning at{" "}
             <a 
-              href="https://www.adelaide.edu.au" 
+              href="https://www.maptek.com" 
               target="_blank" 
               rel="noopener noreferrer"
               className="underline underline-offset-2 font-medium text-neutral-900 dark:text-neutral-100 hover:text-neutral-600 dark:hover:text-neutral-300 transition-colors"
             >
-              The University of Adelaide
+              Maptek
+            </a>{" "}
+            while studying at{" "}
+            <a
+              href="https://www.adelaide.edu.au"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline underline-offset-2 font-medium text-neutral-900 dark:text-neutral-100 hover:text-neutral-600 dark:hover:text-neutral-300 transition-colors"
+            >
+              Adelaide University
             </a>.
           </p>
 
@@ -90,11 +101,10 @@ export default function Home() {
                 <h2 className="text-xl font-bold">About</h2>
                 <div className="flex flex-col gap-4 text-sm text-zinc-600 dark:text-zinc-400">
                     <p>
-                    My work spans research and industry, from robotics and computer vision to evolutionary optimization and LLM-integrated full-stack systems.
-
+                      My work spans research and industry, from robotics and computer vision to combinatorial optimization, low-latency systems, and LLM-integrated full-stack products.
                     </p>
                     <p>
-                    I’m motivated by environments that demand more over time, where I actively seek out harder problems, hold myself to higher standards, and invest the effort needed to grow into them.
+                      I enjoy problems that reward strong fundamentals and careful engineering, whether that means pushing latency down in a GPU-heavy pipeline, benchmarking search heuristics under strict budgets, or turning messy data workflows into usable products.
                     </p>
 
                 </div>
@@ -107,16 +117,27 @@ export default function Home() {
                 <section id="experience" className="flex flex-col gap-8 scroll-mt-8">
                     <h2 className="text-xl font-bold">Technical Experience</h2>
                     <div className="relative border-l border-neutral-200 dark:border-neutral-800 ml-3 space-y-8">
+                      {/* Optiver */}
+                      <ExpandableCard
+                        logo={<div className="w-8 h-8 rounded-full bg-gradient-to-br from-sky-500 to-blue-700 flex items-center justify-center text-white text-xs font-bold">OP</div>}
+                        title="Optiver"
+                        subtitle="Career Kickstarter - Software Engineering Track"
+                        dateRange="Mar 2026"
+                        bullets={[
+                          <>Selected for a competitive program focused on <span className="font-medium text-neutral-800 dark:text-neutral-200">low-latency systems</span>, networking, and exchange-level trading infrastructure.</>,
+                          <>Built a simulated exchange from scratch using <span className="font-medium text-neutral-800 dark:text-neutral-200">gRPC</span> and <span className="font-medium text-neutral-800 dark:text-neutral-200">Protobuf</span>, implementing order matching, low-latency communication, and real-time position and risk management.</>,
+                        ]}
+                      />
+
                       {/* Undergraduate Researcher */}
                       <ExpandableCard
                         logo={<Image src={uofaLogo} alt="University of Adelaide" className="w-8 h-8 rounded-full object-cover" />}
                         title="University of Adelaide"
                         subtitle="Undergraduate Researcher"
-                        dateRange="Dec 2025 – Present"
+                        dateRange="Dec 2025 – Mar 2026"
                         bullets={[
-                          <>Benchmarked <span className="font-medium text-neutral-800 dark:text-neutral-200">local search heuristics (LNS, VNS, LKH-3)</span> for the <span className="font-medium text-neutral-800 dark:text-neutral-200">Traveling Salesman Problem with Time Windows (TSPTW)</span> instances enforcing strict computational budgets to ensure algorithmic fairness.</>,
-                          <>Implemented a <span className="font-medium text-neutral-800 dark:text-neutral-200">sequential strategy</span> to transfer solution states between tasks, statistically validating efficiency gains over isolated execution.</>,
-                          <>Optimizing an <span className="font-medium text-neutral-800 dark:text-neutral-200">Evolutionary Algorithm</span> to outperform these local search benchmarks, targeting superior solution quality and success ratios in highly constrained search spaces.</>,
+                          <>Benchmarked <span className="font-medium text-neutral-800 dark:text-neutral-200">LNS, VNS, and LKH-3</span> across <span className="font-medium text-neutral-800 dark:text-neutral-200">TSPTW</span> instances scaling from 20 to 200 nodes under strict computational budgets to establish fair sequential baselines.</>,
+                          <>Developed a <span className="font-medium text-neutral-800 dark:text-neutral-200">warm-start transfer strategy</span> that reuses solution states between tasks, achieving statistically significant efficiency gains over isolated execution.</>,
                         ]}
                       />
 
@@ -127,8 +148,8 @@ export default function Home() {
                         subtitle="Research Assistant"
                         dateRange="Jul 2025 – Dec 2025"
                         bullets={[
-                          <>Contributed to fine-tuning <span className="font-medium text-neutral-800 dark:text-neutral-200">Vision-and-Language foundation models</span> by refining the synthetic data generation pipeline in <span className="font-medium text-neutral-800 dark:text-neutral-200">NVIDIA Isaac Sim</span>.</>,
-                          <>Enhanced existing trajectory algorithms to eliminate path instability, producing <span className="font-medium text-neutral-800 dark:text-neutral-200">500 high-fidelity video sequences</span> used as ground-truth training data.</>,
+                          <>Overhauled the synthetic data generation pipeline in <span className="font-medium text-neutral-800 dark:text-neutral-200">NVIDIA Isaac Sim</span>, enabling scalable fine-tuning of <span className="font-medium text-neutral-800 dark:text-neutral-200">vision-language foundation models</span> on domain-specific tasks.</>,
+                          <>Debugged trajectory planning algorithms to eliminate path instability, generating <span className="font-medium text-neutral-800 dark:text-neutral-200">500+ high-fidelity video sequences</span> used as ground-truth training data.</>,
                         ]}
                       />
 
@@ -139,8 +160,8 @@ export default function Home() {
                         subtitle="Software Engineer Intern"
                         dateRange="Jul 2025 – Sep 2025"
                         bullets={[
-                          <>Engineered a <span className="font-medium text-neutral-800 dark:text-neutral-200">full-stack LLM-powered analytics platform</span> for NRC Health, enabling enterprise users to extract custom data insights through <span className="font-medium text-neutral-800 dark:text-neutral-200">natural language queries</span>.</>,
-                          <>Implemented production-ready <span className="font-medium text-neutral-800 dark:text-neutral-200">data-to-text pipelines</span> and <span className="font-medium text-neutral-800 dark:text-neutral-200">prompt engineering strategies</span>, automating report generation to significantly streamline workflows for non-technical stakeholders.</>,
+                          <>Built an <span className="font-medium text-neutral-800 dark:text-neutral-200">LLM-powered analytics platform</span> with <span className="font-medium text-neutral-800 dark:text-neutral-200">React, Python, and PostgreSQL</span> for NRC Health, enabling natural-language queries over structured data with <span className="font-medium text-neutral-800 dark:text-neutral-200">sub-3s response times</span>.</>,
+                          <>Developed <span className="font-medium text-neutral-800 dark:text-neutral-200">data-to-text generation pipelines</span> using structured prompt chains, automating weekly reporting for <span className="font-medium text-neutral-800 dark:text-neutral-200">30+ stakeholders</span>.</>,
                         ]}
                       />
                     </div>
@@ -158,10 +179,10 @@ export default function Home() {
                         <div className="flex flex-col gap-1">
                             <h3 className="font-semibold text-neutral-900 dark:text-neutral-100">The University of Adelaide</h3>
                             <p className="text-sm text-neutral-600 dark:text-neutral-400">Bachelor of Computer Science (Advanced)</p>
-                            <p className="text-sm text-neutral-600 dark:text-neutral-400">GPA: 6.25/7.0</p>
+                            <p className="text-sm text-neutral-600 dark:text-neutral-400">GPA: 6.28/7.0 | Major GPA: 6.43/7.0</p>
 
                             <p className="text-xs text-neutral-500 dark:text-neutral-500 mt-0.5">
-                              Feb 2024 – Present
+                              Feb 2024 – Expected Nov 2026
                             </p>
                         </div>
                       </div>
@@ -182,8 +203,8 @@ export default function Home() {
                     dateRange="Jan 2026 – Present"
                     link="https://coderecall-web.vercel.app/"
                     bullets={[
-                      <>Engineered a <span className="font-medium text-neutral-800 dark:text-neutral-200">full-stack spaced repetition platform</span>, implementing a <span className="font-medium text-neutral-800 dark:text-neutral-200">modified FSRS algorithm</span> to mathematically optimize review intervals based on memory stability metrics.</>,
-                      <>Designed a <span className="font-medium text-neutral-800 dark:text-neutral-200">confidence-based grading system</span> that drives a custom decay formula, dynamically calibrating target retention probabilities to maximize study efficiency.</>,
+                      <>Built a <span className="font-medium text-neutral-800 dark:text-neutral-200">full-stack spaced repetition platform</span> with a <span className="font-medium text-neutral-800 dark:text-neutral-200">modified FSRS algorithm</span> and confidence-based grading to dynamically optimize review intervals.</>,
+                      <>Designed the review workflow around <span className="font-medium text-neutral-800 dark:text-neutral-200">200+ coding problems</span>, balancing retrieval practice, retention targets, and usability for consistent long-term study.</>,
                     ]}
                   />
 
@@ -199,6 +220,42 @@ export default function Home() {
                       <>Designed a <span className="font-medium text-neutral-800 dark:text-neutral-200">scalable relational database schema (MySQL)</span> and a custom <span className="font-medium text-neutral-800 dark:text-neutral-200">Repository Pattern abstraction layer</span>, optimizing complex join queries for real-time aggregation.</>,
                     ]}
                   />
+                </div>
+            </section>
+
+            {/* Awards Section */}
+            <section id="awards" className="flex flex-col gap-6 scroll-mt-8">
+                <h2 className="text-xl font-bold">Awards</h2>
+                <div className="relative border-l border-neutral-200 dark:border-neutral-800 ml-3 space-y-8">
+                  <ExpandableCard
+                    logo={<div className="w-8 h-8 rounded-full bg-gradient-to-br from-emerald-500 to-teal-700 flex items-center justify-center text-white text-xs font-bold">JS</div>}
+                    title="Jane Street Electronic Trading Challenge"
+                    subtitle="First Place"
+                    dateRange="Mar 2025"
+                    bullets={[
+                      <>Secured <span className="font-medium text-neutral-800 dark:text-neutral-200">1st place out of 15 teams</span> by engineering a market-making strategy around statistical arbitrage signals and real-time order book imbalances.</>,
+                      <>Optimized for <span className="font-medium text-neutral-800 dark:text-neutral-200">risk-adjusted PnL</span>, balancing aggressiveness, inventory risk, and execution quality in a competitive simulated market.</>,
+                    ]}
+                  />
+                </div>
+            </section>
+
+            {/* Skills Section */}
+            <section id="skills" className="flex flex-col gap-6 scroll-mt-8">
+                <h2 className="text-xl font-bold">Technical Skills</h2>
+                <div className="rounded-2xl border border-neutral-200 dark:border-neutral-800 bg-white/60 dark:bg-neutral-900/60 p-6 space-y-4">
+                  <p className="text-sm text-neutral-600 dark:text-neutral-400">
+                    <span className="font-medium text-neutral-900 dark:text-neutral-100">Languages:</span>{" "}
+                    Python, C/C++, TypeScript, JavaScript, SQL, Java
+                  </p>
+                  <p className="text-sm text-neutral-600 dark:text-neutral-400">
+                    <span className="font-medium text-neutral-900 dark:text-neutral-100">Frameworks:</span>{" "}
+                    Next.js, React, Node.js, Vue.js, Express.js
+                  </p>
+                  <p className="text-sm text-neutral-600 dark:text-neutral-400">
+                    <span className="font-medium text-neutral-900 dark:text-neutral-100">Tools:</span>{" "}
+                    CUDA, Docker, PostgreSQL, MySQL, Git, Linux, CMake
+                  </p>
                 </div>
             </section>
 
